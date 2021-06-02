@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JavaScript Output(출력)</title>
+<script type="text/javascript">
+	// 1. 브라우저(화면)에 출력하기 : document.write("내용"); => 테스트가 목적
+	// 	** 주의 사항 : html문서가 로드된 후에 document.write를 사용하면 이전에 내용들은 모두 삭제된다.
+	// 	head가 body 보다는 먼저 실행된다.
+	document.write("안녕 자바스크립트");
+	//	줄 변경이 되지 않음(즉, 태그를 사용해야 된다.)
+	document.write("<h2>안녕 자바스크립트<h2>");
+	//	스타일도 적용된다.
+	document.write("<h2 style='color: red'>안녕 자바스크립트<h2>");
+	document.write('<h2 style="color: tomato">안녕 자바스크립트<h2>');
+	
+	// 2. 콘솔에 출력하기 : console.log("내용");		=> 디버깅이 목적
+	// 크롬에서 F12를 누른다.
+	console.log("방가방가");
+	console.log("Hi");
+	console.log(6+5);
+	
+	// 3. alert("내용") => 경고창(자세한 내용은 나중에)
+	// 항상 먼저 대화상자로 나타난다.
+	alert("Welcome");
+	
+	// 4. innerHTML
+	// 기본 태그에 javascript를 이용해서 데이터를 getter와 setter를 할 수 있다.
+	
+</script>
+</head>
+<body>
+	<h3 style="color: skyblue">Hello JavaScript</h3>
+	<h3 id="h3"> 대한민국 </h3>
+	<script type="text/javascript">
+		// getter 역할
+		var k = document.getElementById("h3").innerHTML;
+		alert(k);
+		// setter 역할
+		document.getElementById("h3").innerHTML = "KOREA";
+	</script>
+</body>
+</html>

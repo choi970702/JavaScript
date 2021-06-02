@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>object : 객체</title>
+<script type="text/javascript">
+	// 생성자 : 보통 생성자는 첫글자를 대문자로
+	function Person(name, age, addr) 
+	{
+		this.name = name;
+		this.age = age;
+		this.addr = addr;
+	}
+	
+	var person1 = new Person("홍길동",24,"서울");
+	var person2 = new Person("임꺽정",48,"함경도");
+	
+	var arr = [person1, person2];
+	
+	document.write("<h3>이름 : "+person1.name+"</h3>");
+	document.write("<h3>나이 : "+person1.age+"</h3>");
+	document.write("<h3>주소 : "+person1.addr+"</h3>");
+	document.write("<hr>");
+	
+	document.write("<h3>이름 : "+person2.name+"</h3>");
+	document.write("<h3>나이 : "+person2.age+"</h3>");
+	document.write("<h3>주소 : "+person2.addr+"</h3>");
+	document.write("<hr>");
+	
+	document.write("<h3>이름 : "+arr[0].name+"</h3>");
+	document.write("<h3>나이 : "+arr[0].age+"</h3>");
+	document.write("<h3>주소 : "+arr[0].addr+"</h3>");
+	document.write("<hr>");
+	
+	document.write("<h3>이름 : "+arr[1].name+"</h3>");
+	document.write("<h3>나이 : "+arr[1].age+"</h3>");
+	document.write("<h3>주소 : "+arr[1].addr+"</h3>");
+	document.write("<hr>");
+	
+	// 배열은 for~in
+	for ( var k in arr) 
+	{
+		document.write("<h3>이름 : "+arr[k].name+"</h3>");
+		document.write("<h3>나이 : "+arr[k].age+"</h3>");
+		document.write("<h3>주소 : "+arr[k].addr+"</h3>");
+		document.write("<hr>");
+	}
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

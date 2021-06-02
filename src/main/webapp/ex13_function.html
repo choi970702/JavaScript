@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>function</title>
+	<script type="text/javascript">
+		// 리턴이 없는 선언함수
+		function add(a, b) 
+		{
+			document.write("<h3>결과 : "+ (a+b)+"</h3>");
+		}
+		
+		// 리턴이 있는 선언함수
+		function sub(a, b) 
+		{
+			return a-b;
+		}
+		
+		// 리턴이 없는 익명함수
+		var msg01 = function() 
+		{
+			document.write("<h3>리턴이 없는 익명함수</h3>");
+		}
+		
+		// 리턴이 있는 익명함수
+		var msg02 = function() 
+		{
+			var str = "리턴이 있는 익명함수";
+			return str;
+		}
+		
+		// 리턴이 있고 인자도 있는 익명함수
+		var msg03 = function(a, b) 
+		{
+			var res1 = a + b;
+			return res1;
+		}
+		
+		// 리턴은 없고 인자는 있는 익명함수
+		var msg04 = function(a, b) 
+		{
+			document.write("<h3>결과 : "+(a+b)+"</h3>");
+		}
+		
+		
+	</script>
+</head>
+<body>
+	<h2> 자바스크립트 function</h2>
+	<script type="text/javascript">
+		// function은 호출해야 실행된다.
+		// 리턴이 없는 선언함수 호출
+		add(12,4);
+		
+		// 리턴이 있는 선언함수 호출
+		var res = sub(12,4);
+		document.write("<h3>결과 : "+res+"</h3>");
+		
+		// 리턴이 없는 익명함수 호출
+		msg01();
+		
+		// 리턴이 있는 익명함수 호출
+		document.write("<h3>"+msg02()+"</h3>");
+		
+		// 리턴이 있고 인자도 있는 익명함수 호출
+		document.write("<h3>결과 : "+msg03(3,8)+"</h3>");
+		
+		// 리턴은 없고 인자는 있는 익명함수 호츌
+		msg04(24,4);
+		
+		
+	</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>typeod : 데이터 타입 표시</title>
+<script type="text/javascript">
+	// 자바스크립트의 자료형 : string, number, boolean, object, function, undefined
+	function test()
+	{
+		document.write("hi");
+	}
+	document.write("<h3>");
+	document.write("hong : "+(typeof "hong")+"<br>");		// string
+	document.write("h : "+(typeof "h")+"<br>");				// string
+	document.write("30 : "+(typeof "30")+"<br>");			// string
+	
+	document.write("30 : "+(typeof 30)+"<br>");				// number
+	document.write("30.1457 : "+(typeof 30.1457)+"<br>");	// number
+	document.write("true : "+(typeof true)+"<br>");			// boolean
+	
+	document.write("[1,2,3] : "+(typeof [1,2,3])+"<br>");			// object
+	document.write("new Date() : "+(typeof new Date())+"<br>");		// object
+	document.write("있는function : "+(typeof test)+"<br>");			// function
+	document.write("없는 function : "+(typeof mycar)+"<br>");			// undefined
+	
+	document.write("</h3>");
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

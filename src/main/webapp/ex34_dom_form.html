@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DOM Form</title>
+<script type="text/javascript">
+	function chk() 
+	{
+		document.getElementById("myCheck1").checked=true;
+	}
+	function unchk() 
+	{
+		document.getElementById("myCheck1").checked=false;
+	}
+	function chk2() 
+	{
+		var x = document.getElementById("myCheck2").checked;
+		document.getElementById("demo1").innerHTML = x;
+	}
+	function chk3(f) 
+	{
+		var x = document.getElementsByName("hobby");
+		var txt = "";
+		for (var i = 0; i < x.length; i++) 
+		{
+			if (x[i].checked) 
+			{
+				txt = txt + x[i].value + " ";
+			}
+		}
+		document.getElementById("demo2").innerHTML = txt;
+		// f.submit;
+	}
+	// 라디오 버튼은 체크박스와 처리 방법이 같다.
+	function chk4() 
+	{
+		document.getElementById("myRadio1").checked=true;
+	}
+	function unchk4() 
+	{
+		document.getElementById("myRadio1").checked=false;
+	}
+	function chk5(f) 
+	{
+		var x = document.getElementsByName("hobby2");
+		var txt = "";
+		for (var i = 0; i < x.length; i++) 
+		{
+			if (x[i].checked) 
+			{
+				txt = txt + x[i].value + " ";
+			}
+		}
+		document.getElementById("demo3").innerHTML = txt;
+		// f.submit;
+	}
+</script>
+</head>
+<body>
+	<form action="#">
+		<!-- 체크박스는 checked = true(체크) | false(해제) -->
+		<p>checkbox : <input type="checkbox" id="myCheck1"></p>
+		<input type="button" value="체크하기" onclick="chk()">
+		<input type="button" value="해제하기" onclick="unchk()">
+	</form><hr>
+	
+	<form action="#">
+		<p>checkbox : <input type="checkbox" id="myCheck2"></p>
+		<input type="button" value="정보전달" onclick="chk2()">
+	</form>
+	<p id="demo1"></p>
+	<hr>
+	
+	<form action="#">
+		<p>취미 : 
+			<input type="checkbox" name="hobby" value="운동">운동
+			<input type="checkbox" name="hobby" value="게임">게임
+			<input type="checkbox" name="hobby" value="영화">영화
+			<input type="checkbox" name="hobby" value="독서">독서
+		</p>
+		<input type="button" value="정보전달" onclick="chk3(this.form)">
+	</form>
+	<p id="demo2"></p>
+	<hr>
+	
+	<form action="#">
+		<!-- 라디오버튼은 checked = true(체크) | false(해제) -->
+		<p>RadioButton: <input type="radio" id="myRadio1"></p>
+		<input type="button" value="선택하기" onclick="chk4()">
+		<input type="button" value="해제하기" onclick="unchk4()">
+	</form>
+	<hr>
+	
+	<form action="#">
+		<p>취미 : 
+			<input type="radio" name="hobby2" value="운동">운동
+			<input type="radio" name="hobby2" value="게임">게임
+			<input type="radio" name="hobby2" value="영화">영화
+			<input type="radio" name="hobby2" value="독서">독서
+		</p>
+		<input type="button" value="정보전달" onclick="chk5(this.form)">
+	</form>
+	<p id="demo3"></p>
+	<hr>
+	
+	
+	
+	
+</body>
+</html>
+
+
+
+
+
+
+
+

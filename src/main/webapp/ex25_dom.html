@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DOM : HTML 요소 생성,추가,삽입</title>
+<style type="text/css">
+	#div1
+	{
+		width: 500px;
+		height: 300px;
+		border: 1px solid red;
+	}
+</style>
+</head>
+<body>
+	<!--  
+		html 요소(태그) 추가 및 삭제하기
+		document.createElement(element) : 요소 생성
+		document.removeChild(element) : 자식요소 삭제
+		document.appendChild(element) : 자식요소 추가
+		document.insertBefore(element1, element2) : 요소2 앞에 요소1 넣어주기
+		document.createTextNode(text) : 텍스트 생성 (시작태그 텍스트 끝태그)
+	
+	-->
+	
+	<div id="div1"> 
+		<p id="p1"> 한국 ICT 인재 개발원 </p>
+		<p id="p2"> 서울 마포구 서교동 첨단빌딩 7증 </p>
+	</div>
+	<!--  
+		<hr>
+		<p>1강의장</p>
+	-->
+	<script type="text/javascript">
+		var p = document.createElement("p");	// p태그 생성
+		var hr = document.createElement("hr");	// hr태그 생성
+		var txt = document.createTextNode("1강의장"); // 글자 생성
+		
+		// 글자를 p태그에 넣기
+		p.appendChild(txt);
+		
+		document.body.appendChild(hr);
+		document.body.appendChild(p);
+		
+		var p2 = document.createElement("p");	// p태그 생성
+		var hr2 = document.createElement("hr");	// hr태그 생성
+		var txt2 = document.createTextNode("Hello"); // 글자 생성
+		p.appendChild(txt2);
+		
+		var div1 = document.getElementById("div1");
+		div1.appendChild(hr2);
+		div1.appendChild(p2);
+		
+		// id p1과 p2 사이에 선을 넣자
+		var hr3 = document.createElement("hr");
+		var p2 =document.getElementById("p2");
+		// hr3를 p2위에 삽입하자
+		div1.insertBefore(hr3, p2);
+		
+		
+	</script>
+</body>
+</html>

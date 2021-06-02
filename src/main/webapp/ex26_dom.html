@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DOM : HTML 요소 변경</title>
+</head>
+<body>
+	<!--  
+		html 요소 변경
+		element.innerHTML : 내용 변경
+		element.attribute : 속성 변경
+		element.style.property : CSS 스타일 속성 변경
+		
+	-->
+	<p align="center">Hello World</p>
+	<p id="p1">Hello JavaScript</p>
+	<p><span id="p2">Hello DOM</span></p>
+	<hr>
+	<p id="res1">서울시 마포구 서교동</p>
+	<p id="res2">한국 ICT 인재 개발원</p>
+	<img id="img1" alt="" src="images/dark.gif">
+	
+	<script type="text/javascript">
+		// 내용 변경
+		document.getElementById("res1").innerHTML = "KOREA seoul";
+		document.getElementById("res2").innerHTML = "<h2>KOREA seoul</h2>";
+		
+		// 속성변경 (p1 가운데 정렬)
+		document.getElementById("p1").align = "center";
+		
+		// 그림 속성 변경
+		document.getElementById("img1").src="images/light.gif";
+		
+		// 스타일 변경
+		document.getElementById("p2").style.color = "tomato";
+		document.getElementById("p2").style.backgroundColor = "skyblue";
+		
+		
+	</script>
+	
+	
+	
+</body>
+</html>
+
+
+
+

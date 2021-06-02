@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DOM Event</title>
+<script type="text/javascript">
+	function event_1() 
+	{
+		var now = new Date();
+		document.getElementById("clock1").innerHTML = now;
+	}
+	function event_2() 
+	{
+		document.getElementById("clock2").innerHTML = new Date().toLocaleTimeString();
+	}
+	function event_3() 
+	{
+		setInterval(() => 
+		{
+			document.getElementById("clock3").innerHTML = new Date().toLocaleTimeString();
+		}, 1000);
+	}
+</script>
+</head>
+<body>
+	<!--  
+		
+		
+		
+	-->
+	<button onclick="event_1()">시계1</button>
+	<button onclick="event_2()">시계1</button>
+	<button onclick="event_3()">시계1</button>
+	
+	<hr>
+	
+	
+	<h2><span id="clock1"></span></h2>
+	<h2><span id="clock2"></span></h2>
+	<h2><span id="clock3"></span></h2>
+	
+	
+</body>
+</html>
+
+
+
+

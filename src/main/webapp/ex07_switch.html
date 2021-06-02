@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>switch문</title>
+<script type="text/javascript">
+	// 자바의 switch문과 같음
+	// switch(key)
+	// {
+	//		case value : 내용;break;
+	//		case value : 내용;break;
+	// }
+	
+	// 받은 변수 k가 한국이면 서울, 일본이면 도쿄, 중국이면 베이징, 미국이면 워싱턴을
+	// 나머지는 데이터에 없는 나라 입니다. 라고 출력하는 switch문을 작성하시오.
+	var k = prompt("나라를 입력하시오.");
+	var res;
+	switch (k) 
+	{
+		case "한국" : res = "서울"; break;
+		case "일본" : res = "도쿄"; break;
+		case "중국" : res = "베이징"; break;
+		case "미국" : res = "워싱턴"; break;
+		default: res = "데이터에 없는 나라 입니다.";
+		break;
+	}
+	document.write("<h2>결과 : "+res+"</h2>");
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

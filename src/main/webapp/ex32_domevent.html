@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	div
+	{
+		width: 200px;
+		margin: auto;
+	}
+</style>
+<script type="text/javascript">
+	function on() 
+	{
+		document.getElementById("img1").src="images/light.gif";
+	}
+	function off() 
+	{
+		document.getElementById("img1").src="images/dark.gif";
+	}
+	function viewon() 
+	{
+		document.getElementById("img2").src="images/light.gif";
+	}
+	function viewoff() 
+	{
+		document.getElementById("img2").src="images/dark.gif";
+	}
+	function viewon2() 
+	{
+		document.getElementById("img3").style.visibility="visible";
+	}
+	function viewoff2() 
+	{
+		document.getElementById("img3").style.visibility="hidden";
+	}
+</script>
+</head>
+<body>
+	<div id="btn">
+		<p>
+			<button onclick="on()">켜기</button>
+			<button onclick="off()">끄기</button>
+		</p>
+		<img id="img1" alt="" src="images/dark.gif">
+		<h3>버튼을 눌러주세요.</h3>
+	</div>
+	<div>
+		<img id="img2" alt="" src="images/dark.gif" onmouseover="viewon()" onmouseout="viewoff()">
+		<h3>마우스를 그림에 올려주세요.</h3>
+	</div>
+	<div>
+		<img id="img3" alt="" src="images/pic1.jpg" style="width: 200px; visibility: hidden;">
+		<h3 onmouseover="viewon2()" onmouseout="viewoff2()">해당 글자에 마우스를 그림에 올려주세요.</h3>
+	</div>
+	
+	
+	
+	
+	
+</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DOM Event</title>
+<style type="text/css">
+	#btn
+	{
+		width: 200px;
+		margin: auto;
+	}
+	#box
+	{
+		width: 200px;
+		height: 200px;
+		border: 1px solid black;
+		margin: auto;
+		line-height: 200px;
+		text-align: center;
+	}
+</style>
+<script type="text/javascript">
+	function setRed() 
+	{
+		document.getElementById("box").style.backgroundColor = "red";
+	}
+	function setGreen() 
+	{
+		document.getElementById("box").style.backgroundColor = "green";
+	}
+	function setBlue() 
+	{
+		document.getElementById("box").style.backgroundColor = "blue";
+	}
+</script>
+</head>
+<body>
+	<div id="btn">
+		<button onclick="setRed()">RED </button>
+		<button onclick="setGreen()">GREEN </button>
+		<button onclick="setBlue()">BLUE </button>
+	</div>
+	<div id="box">BOX1</div>
+	
+</body>
+</html>

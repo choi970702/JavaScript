@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>object : 객체</title>
+<script type="text/javascript">
+	function prn(msg) 
+	{
+		document.write("<h3>"+msg+"</h3>");
+	}
+	
+	var person = 
+	{
+			name : "둘리",
+			age : 18,
+			salary : 4800,
+			pay : function() 
+			{
+				var month = this.salary / 12 ;
+				
+				// 함수 호출
+				prn("이름 : "+this.name);
+				prn("월급 : "+month);
+			}
+	}
+	
+	prn(person["name"]);
+	prn(person.age);
+	person.pay();
+	document.write("<hr>");
+	
+	
+	
+	
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

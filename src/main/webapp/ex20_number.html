@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Number : 숫자 관련 함수</title>
+<script type="text/javascript">
+	// 숫자는 한 가지 유형이다. (즉, 정수와 실수를 나누지 않는다.)
+	// 숫자는 항상 64bit 부동 소수점이다.
+	// 정수는 최대 15자리까지 정확하다.
+	// 실수는 최대 17자리까지 표시하지만, 100% 정확하지 않다.
+	var x = 0.2 + 0.1;
+	document.write("<h3>"+x+"</h3>");
+	
+	// 숫자는 산술연산이 가능, 문자형 숫자는 더하기를 제외한 나머지만 가능
+	// + 는 문자 연결자로 사용된다.
+	// 문자열 + 숫자, 숫자 + 문자열, 문자열 + 문자열 => 문자연결자(+연산불가능)
+	var s1 = 10;
+	var s2 = 6;
+	document.write(s1+"+"+s2+"="+(s1+s2)+"<br>");
+	document.write(s1+"-"+s2+"="+(s1-s2)+"<br>");
+	document.write(s1+"*"+s2+"="+(s1*s2)+"<br>");
+	document.write(s1+"/"+s2+"="+(s1/s2)+"<br>");
+	document.write(s1+"%"+s2+"="+(s1%s2)+"<br>");
+	document.write("<hr>");
+	
+	var s1 = "10";
+	var s2 = "6";
+	document.write(s1+"+"+s2+"="+(s1+s2)+"<br>");
+	document.write(s1+"-"+s2+"="+(s1-s2)+"<br>");
+	document.write(s1+"*"+s2+"="+(s1*s2)+"<br>");
+	document.write(s1+"/"+s2+"="+(s1/s2)+"<br>");
+	document.write(s1+"%"+s2+"="+(s1%s2)+"<br>");
+	document.write("<hr>");
+	
+	// 숫자를 문자로 변경 : toString()
+	var s1 = 10;
+	var s2 = 6;
+	document.write(s1+"+"+s2+"="+(s1+s2)+"<br>");
+	document.write(s1+"+"+s2+"="+(s1.toString()+s2)+"<br>");
+	document.write("<hr>");
+	
+	// 지정한 소수점 이하 자리수 반올림 : toFixed(지정자리)
+	var s1 = 19.555;
+	var s2 = 19.444;
+	document.write(s1.toFixed()+"<br>");	// 20
+	document.write(s2.toFixed()+"<br>");	// 19
+	document.write(s1.toFixed(0)+"<br>");	// 20
+	document.write(s2.toFixed(0)+"<br>");	// 19
+	document.write(s1.toFixed(1)+"<br>");	// 19.6
+	document.write(s2.toFixed(1)+"<br>");	// 19.4
+	document.write("<hr>");
+	
+	var s1 = 5555.555;
+	var s2 = 4444.444;
+	// 오류발생 : toFixed(n)의 n은 0~100까지만 가능, 음수 사용못함
+	// document.write(s1.toFixed(-1)+"<br>");	// 오류발생
+	// document.write(s2.toFixed(-1)+"<br>");	// 오류발생
+	document.write((s1/10).toFixed()*10+"<br>");	// 5560
+	document.write((s2/10).toFixed()*10+"<br>");	// 4440
+	document.write("<hr>");
+	
+	// 문자열 숫자를 숫자로 변경(Number, parseInt, parseFloat)
+	// NaN (Not a Number) : 숫자가 들어갈 자리에 다른 데이터가 들어오면 표시되는 에러표시
+	// isNaN() : NaN을 확인 (NaN이면 true, NaN이 아니면 false)
+	// true == 1 하면 같다, true === 1 다르다.
+	document.write(true + 10 + "<br>");	// 11
+	document.write(true - 10 + "<br>");	// -9
+	document.write("<hr>");
+	
+	document.write(Number(true) + 10 + "<br>");	// 11
+	document.write(parseInt(true) + 10 + "<br>");	// NaN
+	document.write(parseFloat(true) + 10 + "<br>");	// NaN
+	document.write("<hr>");
+	
+	// parseInt 는 실수가 들어오면 정수만 처리한다.
+	document.write(Number("10") + 10 + "<br>");			// 20
+	document.write(Number("10.6") + 10 + "<br>");		// 20.6
+	document.write(parseInt("10") + 10 + "<br>");		// 20
+	document.write(parseInt("10.6") + 10 + "<br>");		// 20
+	document.write(parseFloat("10") + 10 + "<br>");		// 20
+	document.write(parseFloat("10.6") + 10 + "<br>");	// 20.6
+	document.write("<hr>");
+	
+	// 첫 글자가 숫자가 아닐때
+	document.write(Number("a10") + 10 + "<br>");			// NaN
+	document.write(parseInt("a10") + 10 + "<br>");			// NaN
+	document.write(parseFloat("a10") + 10 + "<br>");		// NaN
+	document.write("<hr>");
+	
+	// 중간에 문자형 숫자가 아닐때 (Number 와 parseXXX의 차이첨)
+	// Number는 전체가 문자형 숫자가 아니면 NaN(문자형 숫자까지는 인정)
+	// parseXXX는 앞에 나온 문자형 숫자는 인정
+	document.write(Number("100a10") + 10 + "<br>");			// NaN
+	document.write(parseInt("100a10") + 10 + "<br>");		// 110
+	document.write(parseFloat("100a10") + 10 + "<br>");		// 110
+	document.write("<hr>");
+	
+	// 앞뒤에 띄어쓰기가 있는 경우(계산됨)
+	document.write(Number(" 10 ") + 10 + "<br>");			// 20
+	document.write(parseInt(" 10 ") + 10 + "<br>");			// 20
+	document.write(parseFloat(" 10 ") + 10 + "<br>");		// 20
+	document.write("<hr>");
+	
+	
+	
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

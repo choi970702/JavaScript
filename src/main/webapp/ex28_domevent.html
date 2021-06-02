@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DOM Event</title>
+<script type="text/javascript">
+	function test1() 
+	{
+		var str = document.getElementById("fname").value;
+		document.getElementById("fname").value = str.toUpperCase();
+	}
+	function test2() 
+	{
+		document.getElementById("p1").innerHTML = "<h3>한국 ICT 인재 개발원</h3>"
+	}
+	function test3() 
+	{
+		document.getElementById("p2").style.display="none";
+	}
+	function test4() 
+	{
+		document.getElementById("p3").style.fontSize="32px";
+		document.getElementById("p3").style.color="green";
+	}
+	
+</script>
+</head>
+<body>
+	<h2> id 선택자를 활용한 이벤트 </h2>
+	<p id="p1"></p>
+	<p id="p2">Hello World</p>
+	<p id="p3">대한민국 서울</p>
+	
+	<!-- 
+	입력한 글자를 대문자로 변경 
+	onchange : 카보드로 엔터를 입력하면 실행, input의 입력된 내용은 value
+	-->
+	Enter your name : <input type="text" id="fname" onchange="test1()"><br>
+	<hr>
+	<!-- style 주기 id가 p1인 글자 변경(삽입)하기 -->
+	<button onclick="test2()">눌러 주세요.</button>
+	
+	<!-- style 주기 id가 p2인 데이터 안보이게 하기 -->
+	<button onclick="test3()">눌러 주세요.</button>
+	
+	<!-- style 주기 id가 p2인 글자크기와 색 지정 -->
+	<button onclick="test4()">눌러 주세요.</button>
+	
+	
+</body>
+</html>
+
+
+
+
+

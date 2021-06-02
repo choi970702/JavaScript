@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>function : 함수 => 자바의 메소드와 같은, 기능, 동작, 이벤트처리</title>
+<script type="text/javascript">
+	// function은 반드시 호출해야만 실행한다.
+	// function의 종류 : 선언함수(이름이 있는 함수), 익명함수(이름이 없음)
+	
+	// 1. 선언함수
+	/* function name([인자]) 
+	{
+		실행 내용들;
+		[return 데이터나 변수];
+	} */
+	
+	// 2. 익명함수
+	/* var 변수 = function([인자]) 
+				{
+					실행 내용들;
+				[return 데이터나 변수];
+				} */
+	
+	// 3. 함수호출
+	// - 선언함수는 먼저 해당 페이지의 구조를 파악할때 만들어진다.
+	//		나중에 호출하면 실행된다.
+	
+	// - 익명함수는 실행될때 만들어 진다.
+	
+	test01();
+	// 선언함수 생성
+	function test01() 
+	{
+		document.write("<h2>선언함수</h2>");
+	}
+	
+	// 선언함수 호출
+	test01();
+	
+	// msg();		오류남
+	// 익명함수 생성
+	var msg = function() 
+	{
+		document.write("<h2>익명함수</h2>");
+	}
+	// 익명함수 호출
+	msg();
+	document.write(msg);
+	
+	
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

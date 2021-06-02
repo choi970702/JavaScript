@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>String</title>
+<script type="text/javascript">
+	var str1 = "Hello";
+	// new String, new Number, new Boolean은 권장하지 않음
+	var str2 = new String("한국 ICT 인재 개발원");
+	
+	// length : 길이
+	document.write("<h3>");
+	document.write(str1.length+"<br>");	// 5
+	
+	// charAt(n) : n번째 문자 추출(0 부터 추출)
+	document.write(str1.charAt(2)+"<br>"); // l
+	
+	// concat(str) : 현재문자열 뒤에 인자로 받은 문자열 추가 => +와 같음
+	document.write(str1.concat(" World~ ")+"<br>");
+	document.write(str1 + " World~ "+ "<br>");
+	
+	// indexOf(문자 | 문자열, 시작위치)
+	document.write(str1.indexOf("l",0)+"<br>");	// 2 => 첫번째 "ㅣ"
+	document.write(str1.indexOf("l",3)+"<br>");	// 3 => 두번째 "ㅣ"
+	document.write(str1.indexOf("l",str1.indexOf("l",0)+1)+"<br>");	// 3 => 두번째 "ㅣ"
+	
+	// lastIndexOf(문자 | 문자열) : 문자|문자열의 마지막 위치
+	document.write(str1.lastIndexOf("l")+"<br>");
+	
+	// search(문자 | 문자열) : 해당 문자 | 문자열을 찾아 위치값 구하기
+	document.write(str1.search("H")+"<br>");
+	
+	// slice(시작,끝) : 끝을 포함하지 않음, 음수는 끝부터 시작(-1부터 시작)
+ 	// 					끝부분을 생략하면 끝까지
+	str1 = "Apple, Banana, Kiwi";
+	document.write(str1.slice(0,5)+"<br>");	// Apple
+	document.write(str1.slice(7,13)+"<br>");	// Banana
+	document.write(str1.slice(15,19)+"<br>");	// Kiwi
+	document.write(str1.slice(7)+"<br>");	// Banana, Kiwi
+	document.write(str1.slice(-4)+"<br>");	// Kiwi
+	document.write("<hr>");
+	
+	// substring : slice와 같음 (음수를 사용 못함)
+	document.write(str1.substring(0,5)+"<br>");	// Apple
+	document.write(str1.substring(7,13)+"<br>");	// Banana
+	document.write(str1.substring(15,19)+"<br>");	// Kiwi
+	document.write(str1.substring(7)+"<br>");	// Banana, Kiwi
+	document.write(str1.substring(-4)+"<br>");	// Apple, Banana, Kiwi
+	document.write("<hr>");
+	
+	// substr(시작, 갯수) : 음수 사용 가능
+	document.write(str1.substr(0,5)+"<br>");	// Apple
+	document.write(str1.substr(7,6)+"<br>");	// Banana
+	document.write(str1.substr(15,4)+"<br>");	// Kiwi
+	document.write(str1.substr(-12,6)+"<br>");	// Banana
+	document.write(str1.substr(7)+"<br>");	// Banana, Kiwi
+	document.write(str1.substr(-4)+"<br>");	// Kiwi
+	document.write("<hr>");
+	
+	str1 = "Apple, Banana, Kiwi";
+	
+	// replace(old, new) : 치환
+	document.write(str1.replace("Banana", "Mango")+"<br>");
+	
+	// toUpperCase() : 대문자로 변경  , toLowerCase() : 소문자로 변경
+	document.write(str1.toUpperCase()+"<br>");
+	document.write(str1.toLowerCase()+"<br>");
+	document.write("<hr>");
+	
+	// split(구분자) : 구분자를 기준으로 배열을 만들어 저장
+	var arr = str1.split(",");
+	for ( var k in arr) 
+	{
+		document.write(arr[k]+"<br>");
+	}
+	document.write("<hr>");
+	
+	// trim() : 앞 뒤 공백 제거
+	str1 = "  Apple, Kiwi  ";
+	document.write(str1.length+"<br>");
+	document.write(str1.trim().length+"<br>");
+	document.write("<hr>");
+	document.write("</h3>");
+	
+	
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

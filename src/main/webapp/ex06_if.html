@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>if문</title>
+<script type="text/javascript">
+	// 자바의 if문과 같은 구조다.
+	/*
+		1. 단순 if문
+		if(조건식)
+		{
+			조건식이 참일때 실행;
+		}
+	
+		2. if ~ else 문
+		if(조건식)
+		{
+			조건식이 참일때 실행;
+		}else
+		{
+			조건식이 거짓일때 실행;
+		}
+		
+		3. 다중 if문
+		if(조건식1)
+		{
+			조건식1이 참일때 실행;
+		}else if(조건식2)
+		{
+			조건식2이 참일때 실행;
+		}else if(조건식3)
+		{
+			조건식3이 참일때 실행;
+		}else
+		{
+			조건식이 모두 거짓일때(나머지) 실행;
+		}	
+	*/
+	
+	// 받은 점수 k1이 90이상이면 합격, 아니면 불합격(단순 if문)
+	var k1 = prompt("점수를 입력 하시오.");
+	var res = "불합격";
+	if(k1>=90)
+	{
+		res = "합격";
+	}
+	document.write(k1+"은"+res+"입니다.<hr>");
+	
+	
+	// 근무시간이 8시간 까지는 8720원, 8시간을 초과하면 초과한 시간 만큼은 1.5배
+	// 근무시간을 받아서 지급할 금액을 출력하시오.(if~else)
+	var time = prompt("근무한 시간을 입력하시오.");
+	var won = 8720;
+	var res;
+	if(time-8 >0)
+	{
+		res = (won * (time-8) * 1.5) + (won * 8);
+	}else
+	{
+		res = time * won;
+	}
+	document.write("받을 돈은 "+res+"원입니다.<hr>");
+	
+	// 받은 점수 k2가 90이상이면 A학점, 80이상이면 B학점, 70이상이면 C학점
+	// 나머지는 F학점을 출력하는 코딩을 하시오.
+	var k2 = prompt("점수를 입력하시오.");
+	var hak;
+	if(k2>=90)
+	{
+		hak = "A";
+	}else if(k2>=80)
+	{
+		hak = "B";
+	}else if(k2>=70)
+	{
+		hak = "C";
+	}else
+	{
+		hak = "F";
+	}
+	document.write("점수의 학점은 "+hak+" 입니다.<hr>");
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

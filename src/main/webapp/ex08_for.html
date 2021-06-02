@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>for문</title>
+<script type="text/javascript">
+	// 일반적인 for문은 자바의 for문과 같다.
+	// 1~10까지 출력     (&nbsp;) : 띄워쓰기
+	for (var i = 1; i < 11; i++) 
+	{
+		document.write(i+"&nbsp;&nbsp;");
+	}
+	document.write("<hr>");
+	
+	// 0~10까지 홀수만 출력
+	for ( i = 0; i < 11; i++) 
+	{
+		if (i%2 == 1) 
+		{
+			document.write(i+"&nbsp;&nbsp;");
+		}
+	}
+	document.write("<hr>");
+	
+	// 0~10까지 홀수의 합
+	var sum = 0;
+	for ( i = 0; i < 11; i++) 
+	{
+		if (i%2 == 1) 
+		{
+			sum = sum + i ;
+		}
+	}
+	document.write(sum+"<hr>");
+	
+	// 5단 출력
+	var s1 = 5 ;
+	for (var i = 1; i < 10; i++) 
+	{
+		document.write(s1+"*"+i+"="+s1*i+"<br>");
+	}
+	document.write("<hr>");
+	
+	// 구구단 1
+	for (var i = 2; i < 10; i++) 
+	{
+		document.write(i+"단<br>");
+		for (var j = 1; j < 10; j++) 
+		{
+			document.write(i+"*"+j+"="+i*j+"<br>");
+		}
+	}
+	document.write("<hr>");
+	
+	// 구구단 2
+	for (var i = 2; i < 10; i++) 
+	{
+		document.write(i+"단<br>");
+		for (var j = 1; j < 10; j++) 
+		{
+			document.write(i+"*"+j+"="+i*j+"&nbsp;&nbsp;");
+		}
+		document.write("<br>");
+	}
+	document.write("<hr>");
+	
+	
+	// 구구단 3
+	for (var i = 2; i < 10; i++) 
+	{
+		document.write(i+"단&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");
+	}
+	document.write("<br>");
+	for (var i = 1; i < 10; i++) 
+	{
+		for (var j = 2; j < 10; j++) 
+		{
+			document.write(j+"*"+i+"="+i*j+"&nbsp;&nbsp;");
+		}
+		document.write("<br>");
+	}
+	document.write("<hr>");
+	
+	// 개선된 for문은(for~in)은 배열에서 배우자 
+</script>
+</head>
+<body>
+
+</body>
+</html>
